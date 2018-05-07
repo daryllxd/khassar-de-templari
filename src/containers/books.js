@@ -7,7 +7,7 @@ class Book extends Component {
   render() {
     return (
       <Col xs={12} md={3}>
-        <Panel bsStyle="success books-gallery-panel">
+        <Panel bsStyle="success" className="books-gallery-panel">
           <Panel.Heading>
             <Panel.Title componentClass="h3">{ this.props.book.title }</Panel.Title>
           </Panel.Heading>
