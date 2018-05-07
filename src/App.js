@@ -17,14 +17,14 @@ class App extends Component {
             </Navbar.Brand>
           </Navbar.Header>
           <Nav>
-            <NavItem componentClass="span">
-              <Link className="ph2" to="/">Pomodoros</Link>
+            <NavItem componentClass={Link} href="/" to="/" active={window.location.pathname === '/'}>
+              Pomodoros
             </NavItem>
-            <NavItem componentClass="span">
-              <Link className="ph2" to="/expenses">Expenses</Link>
+            <NavItem componentClass={Link} href="/expenses" to="/expenses" active={window.location.pathname === '/expenses'}>
+              Expenses
             </NavItem>
-            <NavItem componentClass="span">
-              <Link className="ph2" to="/books">Books</Link>
+            <NavItem componentClass={Link} href="/books" to="/books" active={window.location.pathname === '/books'}>
+              Books
             </NavItem>
           </Nav>
         </Navbar>
