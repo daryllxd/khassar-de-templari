@@ -17,13 +17,13 @@ class App extends Component {
             </Navbar.Brand>
           </Navbar.Header>
           <Nav>
-            <NavItem href="#">
+            <NavItem componentClass="span">
               <Link className="ph2" to="/">Pomodoros</Link>
             </NavItem>
-            <NavItem href="#">
+            <NavItem componentClass="span">
               <Link className="ph2" to="/expenses">Expenses</Link>
             </NavItem>
-            <NavItem href="#">
+            <NavItem componentClass="span">
               <Link className="ph2" to="/books">Books</Link>
             </NavItem>
           </Nav>
