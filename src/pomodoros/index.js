@@ -4,14 +4,14 @@ import axios from 'utilities/axios';
 
 export default class PomodorosApp extends Component {
   state = {
-    books: []
+    pomodoros: []
   }
 
   componentDidMount() {
     axios({ method:'get', url:'/api/v1/pomodoros' })
       .then( (res) => {
-        const books = res.data.books;
-        this.setState({ books });
+        const pomodoros = res.data.pomodoros;
+        this.setState({ pomodoros });
       })
   }
 
@@ -22,6 +22,13 @@ export default class PomodorosApp extends Component {
           <PageHeader>
             Pomodoros. <small>Trust the process.</small>
           </PageHeader>
+        </Row>
+        <Row>
+          {
+            this.state.pomodoros.map ( (pomodoro) =>
+                <h1>{ pomodoro.description } { pomodoro.duration }</h1>
+            )
+          }
         </Row>
       </div>
     );

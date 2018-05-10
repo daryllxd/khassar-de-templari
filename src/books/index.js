@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { Grid, Row, Col, Clearfix, PageHeader, Panel, Button, FormGroup, ControlLabel, FormControl, HelpBlock } from 'react-bootstrap';
+import { Row, PageHeader } from 'react-bootstrap';
 import axios from 'utilities/axios';
 import 'stylesheets/books.css';
-import AddBookForm from 'books/add_book_form';
-import BooksGallery from 'books/books_gallery';
+import AddBookForm from 'books/AddBookForm';
+import BooksGallery from 'books/BooksGallery';
 
 export default class BooksApp extends Component {
   state = {
