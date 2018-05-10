@@ -9,6 +9,7 @@
   /* these are the flex items */
   flex: 1;
   flex-basis: 25%;
+  text-align: center;
 }
 
 .books-gallery-panel {

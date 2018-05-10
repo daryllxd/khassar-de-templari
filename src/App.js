@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Route, Link } from 'react-router-dom';
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
-import Books from './containers/books'
+import BooksApp from './books'
 import Expenses from './containers/expenses'
 import logo from './logo.svg';
 import './App.css';
@@ -29,7 +29,7 @@ class App extends Component {
           </Nav>
         </Navbar>
         <Route exact path="/expenses" component={Expenses} />
-        <Route exact path="/books" component={Books} />
+        <Route exact path="/books" component={BooksApp} />
       </div>
     );
   }
