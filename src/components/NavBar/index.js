@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Navbar, Nav } from 'react-bootstrap';
 import NavBarItem from 'components/NavBar/NavBarItem';
 
-const NavBar = () => {
+function NavBar() {
   return (
     <Navbar inverse>
       <Navbar.Header>
