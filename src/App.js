@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom';
-import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
+import { Route } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
+import NavBar from './components/NavBar'
 import PomodorosApp from './pomodoros'
 import BooksApp from './books'
 import Expenses from './containers/expenses'
@@ -13,25 +13,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Navbar inverse>
-          <Navbar.Header>
-            <Navbar.Brand>
-              <Link className="ph2" to="/">Daryllxd Web Front-end.</Link>
-            </Navbar.Brand>
-          </Navbar.Header>
-          <Nav>
-            <ToastContainer />
-            <NavItem componentClass={Link} href="/" to="/pomodoros" active={window.location.pathname === '/pomodoros'}>
-              Pomodoros
-            </NavItem>
-            <NavItem componentClass={Link} href="/expenses" to="/expenses" active={window.location.pathname === '/expenses'}>
-              Expenses
-            </NavItem>
-            <NavItem componentClass={Link} href="/books" to="/books" active={window.location.pathname === '/books'}>
-              Books
-            </NavItem>
-          </Nav>
-        </Navbar>
+        <ToastContainer />
+        <NavBar />
         <Route exact path="/pomodoros" component={PomodorosApp} />
         <Route exact path="/expenses" component={Expenses} />
         <Route exact path="/books" component={BooksApp} />
