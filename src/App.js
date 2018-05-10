@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Route, Link } from 'react-router-dom';
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
+import PomodorosApp from './pomodoros'
 import BooksApp from './books'
 import Expenses from './containers/expenses'
 import logo from './logo.svg';
@@ -17,7 +18,7 @@ class App extends Component {
             </Navbar.Brand>
           </Navbar.Header>
           <Nav>
-            <NavItem componentClass={Link} href="/" to="/" active={window.location.pathname === '/'}>
+            <NavItem componentClass={Link} href="/" to="/pomodoros" active={window.location.pathname === '/pomodoros'}>
               Pomodoros
             </NavItem>
             <NavItem componentClass={Link} href="/expenses" to="/expenses" active={window.location.pathname === '/expenses'}>
@@ -28,6 +29,7 @@ class App extends Component {
             </NavItem>
           </Nav>
         </Navbar>
+        <Route exact path="/pomodoros" component={PomodorosApp} />
         <Route exact path="/expenses" component={Expenses} />
         <Route exact path="/books" component={BooksApp} />
       </div>
