@@ -1,5 +1,7 @@
-import React, { Component } from 'react';
-import { Row, PageHeader } from 'react-bootstrap';
+import React, {Component} from 'react';
+import {Row} from 'react-bootstrap';
+import PomodorosAppHeader from 'pomodoros/PomodorosAppHeader';
+import PomodorosAppBody from 'pomodoros/PomodorosAppBody';
 import axios from 'utilities/axios';
 
 export default class PomodorosApp extends Component {
@@ -18,18 +20,8 @@ export default class PomodorosApp extends Component {
   render() {
     return (
       <div className='container'>
-        <Row>
-          <PageHeader>
-            Pomodoros. <small>Trust the process.</small>
-          </PageHeader>
-        </Row>
-        <Row>
-          {
-            this.state.pomodoros.map ( (pomodoro) =>
-                <h1>{ pomodoro.description } { pomodoro.duration }</h1>
-            )
-          }
-        </Row>
+        <PomodorosAppHeader />
+        <PomodorosAppBody pomodoros={this.state.pomodoros} />
       </div>
     );
   }
