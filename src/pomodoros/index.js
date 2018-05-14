@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import {Row} from 'react-bootstrap';
+import axios from 'utilities/axios';
 import PomodorosAppHeader from 'pomodoros/PomodorosAppHeader';
 import PomodorosAppBody from 'pomodoros/PomodorosAppBody';
-import axios from 'utilities/axios';
 
 export default class PomodorosApp extends Component {
   state = {
