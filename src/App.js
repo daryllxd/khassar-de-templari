@@ -1,12 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Route } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
-
 import NavBar from './components/NavBar'
 import PomodorosApp from './pomodoros'
 import BooksApp from './books'
 import Expenses from './containers/expenses'
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
