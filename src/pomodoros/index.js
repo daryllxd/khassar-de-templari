@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import axios from 'utilities/axios';
 import PomodorosAppHeader from 'pomodoros/PomodorosAppHeader';
-import PomodorosAppBody from 'pomodoros/PomodorosAppBody';
+import PomodorosTabs from 'pomodoros/PomodorosTabs';
 
 const mapStateToProps = state => {
   return {
@@ -31,7 +31,8 @@ class NRPomodorosApp extends Component {
     return (
       <div className='container'>
         <PomodorosAppHeader />
-        <PomodorosAppBody pomodoros={this.props.pomodoroApp.pomodoros} />
+        <PomodorosTabs pomodoros={this.props.pomodoroApp.pomodoros}/>
+
       </div>
     );
   }
