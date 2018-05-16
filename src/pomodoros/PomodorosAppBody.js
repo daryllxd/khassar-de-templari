@@ -4,7 +4,7 @@ import PomodorosListItem from 'pomodoros/PomodorosListItem';
 
 function PomodorosAppBody({pomodoros}) {
   return (
-    <Row>
+    <React.Fragment>
       <Table striped condensed>
         <thead>
           <tr>
@@ -22,7 +22,7 @@ function PomodorosAppBody({pomodoros}) {
           }
         </tbody>
       </Table>
-    </Row>
+    </React.Fragment>
   );
 }
 
