@@ -2,7 +2,18 @@ import React, { Component } from 'react';
 import { Row, Table } from 'react-bootstrap';
 import ActivityTagsListItem from 'pomodoros/activity_tags/ActivityTagsListItem'
 
-class ActivityTagsList extends Component {
+function WithLoading(Component) {
+  return function WithLoadingComponent({ isLoading, ...props })  {
+    if (!isLoading) {
+      return (<Component {...props} />);
+    }
+    else {
+      return (<h1>Loading.</h1>);
+    }
+  }
+}
+
+class aActivityTagsList extends Component {
   render() {
     let { activityTags, sortBy } = this.props;
 
@@ -26,5 +37,6 @@ class ActivityTagsList extends Component {
   }
 }
 
-export default ActivityTagsList;
+const ActivityTagsList = WithLoading(aActivityTagsList);
 
+export default ActivityTagsList;
