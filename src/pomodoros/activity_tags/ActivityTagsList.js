@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Row, Table } from 'react-bootstrap';
+import ListLoader from 'components/Loaders/ListLoader'
 import ActivityTagsListItem from 'pomodoros/activity_tags/ActivityTagsListItem'
 
 function WithLoading(Component) {
@@ -8,7 +9,7 @@ function WithLoading(Component) {
       return (<Component {...props} />);
     }
     else {
-      return (<h1>Loading.</h1>);
+      return (<ListLoader />);
     }
   }
 }
