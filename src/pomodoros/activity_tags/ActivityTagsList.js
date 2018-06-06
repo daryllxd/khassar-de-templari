@@ -1,18 +1,7 @@
 import React, { Component } from 'react';
 import { Row, Table } from 'react-bootstrap';
-import ListLoader from 'components/Loaders/ListLoader'
 import ActivityTagsListItem from 'pomodoros/activity_tags/ActivityTagsListItem'
-
-function WithLoading(Component) {
-  return function WithLoadingComponent({ isLoading, ...props })  {
-    if (!isLoading) {
-      return (<Component {...props} />);
-    }
-    else {
-      return (<ListLoader />);
-    }
-  }
-}
+import WithLoading from 'components/WithLoading'
 
 class aActivityTagsList extends Component {
   render() {

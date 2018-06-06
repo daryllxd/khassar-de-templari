@@ -6,7 +6,7 @@ import ActivityTagsView from 'pomodoros/activity_tags';
 function PomodorosTabs({pomodoros}) {
   return (
     <Row>
-    <Tabs defaultActiveKey={2} id="pomodoros-tab">
+    <Tabs defaultActiveKey={1} id="pomodoros-tab">
       <Tab eventKey={1} title="Pomodoros">
         <PomodorosAppBody pomodoros={pomodoros} />
       </Tab>
